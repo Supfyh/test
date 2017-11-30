@@ -48,6 +48,6 @@
 
 ## 遇到的问题:php中file_get_contents无法请求https连接
 *错误提示:*
-    > warning: fopen() [function.fopen]: Unable to find the wrapper "https" - did you forget to enable it when you configured PHP?
+		<warning: fopen() [function.fopen]: Unable to find the wrapper "https" - did you forget to enable it when you configured PHP?>
 *windows解决方案(用的是wamp):*
 	> windows下的PHP，只需要到php.ini中把extension=php_openssl.dll前面的;删掉，重启服务即可。
