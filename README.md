@@ -20,7 +20,7 @@
 
 ## git命令汇总
 - git config配置本地仓库
-> 常用git config --global user.name、git config --global user.email
+	> 常用git config --global user.name、git config --global user.email
 - git config --list查看配置详情
 - git init 初始一个仓库，添加--bare可以初始化一个共享（裸）仓库
 - git status 可以查看当前仓库的状态
@@ -38,7 +38,16 @@
 - git push origin hotfix（通常的写法）相当于
 - git push origin hotfix:hotfix
 - git push origin hotfix:newfeature
-> 本地仓库分支名称和远程仓库分支名称一样的情况下可以简写成一个，即git push “仓库地址” “分支名称”，如果远程仓库没有对应分支，将会自动创建
+	> 本地仓库分支名称和远程仓库分支名称一样的情况下可以简写成一个，即git push “仓库地址” “分支名称”，如果远程仓库没有对应分支，将会自动创建
 - git remote add “主机名称” “远程仓库地址”添加远程主机，即给远程主机起个别名，方便使用
 - git remote 可以查看已添加的远程主机
 - git remote show “主机名称”可以查看远程主机的信息
+
+
+
+
+## 遇到的问题:php中file_get_contents无法请求https连接
+* 错误提示: *
+    	> <Warning: fopen() [function.fopen]: Unable to find the wrapper "https" - did you forget to enable it when you configured PHP?>
+* windows解决方案(用的是wamp): *
+> windows下的PHP，只需要到php.ini中把extension=php_openssl.dll前面的;删掉，重启服务即可。
