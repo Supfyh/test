@@ -80,7 +80,7 @@
  	```javascript
  	gulp.task('useref', function () {  
 		return gulp.src('./index.html')
-			.pipe(useref()) 				//在'./index.html'进行了类似判断操作  
+			.pipe(useref()) 			//在'./index.html'进行了类似判断操作  
 			.pipe(gulpif('*.js', uglify()))		//对'./index.html'中的'*.js'压缩  
 			.pipe(gulpif('*.js', rev()))		//对'./index.html'中的'*.js'添加版本号  
 			.pipe(gulp.dest('./release'))		//保存到'./release'下  
