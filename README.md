@@ -60,8 +60,8 @@
 
 
 ## gulp项目构建工具的学习
-- npm init 创建package.json文件，用来记录依赖
-- 安装:
+-	npm init 创建package.json文件，用来记录依赖
+- 	安装:
 	> cnpm install gulp --save-dev(--sava-dev:是将此依赖记录到package.json文件的devdependences.) 
 	> cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)
 	> more:gulp-less(编译less为CSS) 
@@ -74,7 +74,7 @@
 	>	gulp-useref()
 	>	gulp-if()
 
-- 使用:
+- 	使用:
 	> 	gulp.task('useref', function () {
 	>		return gulp.src('./index.html')
 	>			.pipe(useref()) 					//在'./index.html'进行了类似判断操作
