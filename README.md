@@ -64,8 +64,8 @@
 * 	安装:
 
 	1.cnpm install gulp --save-dev(--sava-dev:是将此依赖记录到package.json文件的devdependences.)   
-	2.cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)
-	3.more:
+	2.cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)  
+	3.more:  
 		> gulp-less(编译less为CSS)   
 		> gulp-uglify(丑化(压缩)JavaScript)   
 		> gulp-autoprefixer(自动添加私有前缀)  
