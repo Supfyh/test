@@ -5,9 +5,9 @@
 - git commit -m 'describe' (将文件推送至本地仓库)
 - git clone address file (address是远程仓库地址；file是要clone到本地的文件夹名)
 - git push origin master (将本地仓库 推送 远程仓库)
-	>1. origin:当我们从远程仓库clone 一个仓库到本地后，经过修改后推送到远程仓库时
-	>2. Git会自动执行以下操作：git remote add origin address
-	>3. 即：origin==address
+	>	1. origin:当我们从远程仓库clone 一个仓库到本地后，经过修改后推送到远程仓库时
+	>	2. Git会自动执行以下操作：git remote add origin address
+	>	3. 即：origin==address
 ## git分支
 - git branch (查看分支)
 - git branch branchName (创建分支)
@@ -19,8 +19,8 @@
 	>	3.所有的功能分支（feature）从developer分支创建(功能完成后，merge(合并)到developer分子后，可删除该分支)  
 	>	4.所有功能开发完成后新建发布分支(release),,最后merge(合并)到master分支
 - git merge branchName (合并某分支到当前分支)  
-	>1. 例：当前为:git checkout master 执行:git merge cart
-	>2. 表示将cart分支合并到master
+	>	1. 例：当前为:git checkout master 执行:git merge cart
+	>	2. 表示将cart分支合并到master
 - git branch -d/D branchName (删除分支，-D:强制删除)
 
 ## git命令汇总
@@ -63,9 +63,9 @@
 *	npm init 创建package.json文件，用来记录依赖
 * 	安装:
 
-	1. 	cnpm install gulp --save-dev(--sava-dev:是将此依赖记录到package.json文件的devdependences.)   
-	2. 	cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)
-	3. 	more:
+	1.cnpm install gulp --save-dev(--sava-dev:是将此依赖记录到package.json文件的devdependences.)   
+	2.cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)
+	3.more:
 		> gulp-less(编译less为CSS)   
 		> gulp-uglify(丑化(压缩)JavaScript)   
 		> gulp-autoprefixer(自动添加私有前缀)  
@@ -80,11 +80,11 @@
  	```javascript
  	gulp.task('useref', function () {  
 		return gulp.src('./index.html')
-			.pipe(useref()) 					//在'./index.html'进行了类似判断操作  
+			.pipe(useref()) 		//在'./index.html'进行了类似判断操作  
 			.pipe(gulpif('*.js', uglify()))		//对'./index.html'中的'*.js'压缩  
 			.pipe(gulpif('*.js', rev()))		//对'./index.html'中的'*.js'添加版本号  
 			.pipe(gulp.dest('./release'))		//保存到'./release'下  
-			.pipe(rev.manifest()) 				//生成一个json文件存 rev的js 与 原js 对应的关系 
+			.pipe(rev.manifest()) 		//生成一个json文件存 rev的js 与 原js 对应的关系 
 			.pipe(rename('js-manifest.json'))	//给此json重命名  
 			.pipe(gulp.dest('./release/rev'));	//将这个json存到'./release/rev'下  
 	});  
