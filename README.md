@@ -66,25 +66,25 @@
 	1.cnpm install gulp --save-dev(--sava-dev:是将此依赖记录到package.json文件的devdependences.)   
 	2.cnpm install gulp-cssmin --save-dev(安装gulp插件，例如执行此程序安装压缩css文件的插件)  
 	3.more:  
-		> gulp-less(编译less为CSS)   
-		> gulp-uglify(丑化(压缩)JavaScript)   
-		> gulp-autoprefixer(自动添加私有前缀)  
-		> gulp-imagemin(压缩图片)   
-		> gulp-rename(重命名)   
-		> gulp-rev(添加版本号)   
-		> gulp-rev-collector(替换内容)  
-		> gulp-useref()  
-		> gulp-if()  
+		> 	gulp-less(编译less为CSS)   
+		> 	gulp-uglify(丑化(压缩)JavaScript)   
+		> 	gulp-autoprefixer(自动添加私有前缀)  
+		> 	gulp-imagemin(压缩图片)   
+		> 	gulp-rename(重命名)   
+		> 	gulp-rev(添加版本号)   
+		> 	gulp-rev-collector(替换内容)  
+		> 	gulp-useref()  
+		> 	gulp-if()  
 
 * 	使用:
  	```javascript
  	gulp.task('useref', function () {  
 		return gulp.src('./index.html')
-			.pipe(useref()) 		//在'./index.html'进行了类似判断操作  
+			.pipe(useref()) 					//在'./index.html'进行了类似判断操作  
 			.pipe(gulpif('*.js', uglify()))		//对'./index.html'中的'*.js'压缩  
 			.pipe(gulpif('*.js', rev()))		//对'./index.html'中的'*.js'添加版本号  
 			.pipe(gulp.dest('./release'))		//保存到'./release'下  
-			.pipe(rev.manifest()) 		//生成一个json文件存 rev的js 与 原js 对应的关系 
+			.pipe(rev.manifest()) 			//生成一个json文件存 rev的js 与 原js 对应的关系 
 			.pipe(rename('js-manifest.json'))	//给此json重命名  
 			.pipe(gulp.dest('./release/rev'));	//将这个json存到'./release/rev'下  
 	});  
